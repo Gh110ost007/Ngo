@@ -126,9 +126,14 @@ app.get('/signout', (req, res) => {
     res.redirect('/admin')
 })
 
-app.listen(PORT, (error) => {
-    if (error) {
-        console.log(error)
-    }
-    else console.log("Server is running on port: " + PORT)
-})
+// For Vercel deployment
+if (process.env.NODE_ENV === 'production') {
+    module.exports = app;
+} else {
+    app.listen(PORT, (error) => {
+        if (error) {
+            console.log(error)
+        }
+        else console.log("Server is running on port: " + PORT)
+    })
+}

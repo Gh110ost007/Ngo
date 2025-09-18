@@ -99,6 +99,8 @@ app.get('/admin', (req, res) => {
     res.render("admin")
 })
 
+
+
 app.post('/login', (req, res) => {
     var checkEmail = req.body.email;
     var checkPassword = req.body.password;
@@ -111,6 +113,10 @@ app.post('/login', (req, res) => {
 
 app.get('/adminHome', checker, (req, res) => {
     res.render("adminHome")
+})
+
+app.get('/mod', checker, (req, res) => {
+    res.render("mod")
 })
 
 app.get('/signout', (req, res) => {

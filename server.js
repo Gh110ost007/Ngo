@@ -50,7 +50,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.set('view engine', 'ejs')
-app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => {
     carousel.find({}).then((data) => {
@@ -140,14 +139,9 @@ app.get('/signout', (req, res) => {
     res.redirect('/admin')
 })
 
-// For Vercel deployment
-if (process.env.NODE_ENV === 'production') {
-    module.exports = app;
-} else {
-    app.listen(PORT, (error) => {
-        if (error) {
-            console.log(error)
-        }
-        else console.log("Server is running on port: " + PORT)
-    })
-}
+app.listen(PORT, (error) => {
+    if (error) {
+        console.log(error)
+    }
+    else console.log("Server is running on port: " + PORT)
+})

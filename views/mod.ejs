@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Modules - NGO</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-brand img {
+            border-radius: 50%;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .module-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+        
+        .module-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .module-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .btn-module {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-module:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .section-title {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .back-to-home {
+            background: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="icon.png" style="height:50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/mod">Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/donate">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Programs & Modules</h1>
+            <p class="lead">Explore our comprehensive range of programs and initiatives designed to create positive change</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="section-title">Available Programs</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">🎓</div>
+                    <h3>Education Initiative</h3>
+                    <p>Providing quality education and learning opportunities for underprivileged children and adults. Our education programs focus on literacy, numeracy, and life skills development.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">🏥</div>
+                    <h3>Healthcare Program</h3>
+                    <p>Delivering essential healthcare services to communities in need. We provide medical camps, health awareness programs, and access to basic healthcare facilities.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">🍽️</div>
+                    <h3>Food Security</h3>
+                    <p>Ensuring food security and nutrition for vulnerable populations. Our programs include food distribution, nutrition education, and sustainable farming initiatives.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">👥</div>
+                    <h3>Community Development</h3>
+                    <p>Building stronger communities through capacity building, skill development, and social empowerment programs that create lasting positive change.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">🌱</div>
+                    <h3>Environmental Conservation</h3>
+                    <p>Promoting environmental conservation and sustainability. We work on tree planting, waste management, and environmental awareness campaigns.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="module-card text-center">
+                    <div class="module-icon">💼</div>
+                    <h3>Livelihood Support</h3>
+                    <p>Creating sustainable livelihood opportunities through skill training, microfinance, and entrepreneurship development programs for economic empowerment.</p>
+                    <a href="#" class="btn-module">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-home">
+        <div class="container">
+            <h3>Ready to Make a Difference?</h3>
+            <p class="lead">Join us in our mission to create positive change in communities worldwide.</p>
+            <a href="/donate" class="btn-module">Donate Now</a>
+            <a href="/" class="btn btn-outline-primary ms-3">Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="/#about" class="nav-link px-2 text-muted">About Us</a></li>
+            <li class="nav-item"><a href="/#contact" class="nav-link px-2 text-muted">Contact Us</a></li>
+            <li class="nav-item"><a href="/mod" class="nav-link px-2 text-muted">Modules</a></li>
+            <li class="nav-item"><a href="/donate" class="nav-link px-2 text-muted">Donate</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2024 NGO, Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

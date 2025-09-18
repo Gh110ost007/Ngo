@@ -27,12 +27,14 @@ This website serves as the digital presence for Santushti Vidya Niketan, a schoo
 ## Admin Portal
 
 The admin portal allows staff to:
+
 - Update carousel images and content
 - Manage information sections
 - Update program descriptions
 - Access secure dashboard with JWT authentication
 
 **Admin Credentials:**
+
 - Email: adminNgo@gmail.com
 - Password: adminNgo
 

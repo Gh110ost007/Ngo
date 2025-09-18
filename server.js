@@ -16,11 +16,18 @@ const serverPassword = "serverAdminNgo";
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://admin:adiritwic@cluster0-shard-00-00.kijr9.mongodb.net:27017,cluster0-shard-00-01.kijr9.mongodb.net:27017,cluster0-shard-00-02.kijr9.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-w5iyxz-shard-0&authSource=admin&retryWrites=true&w=majority';
 
-mongoose.connect(mongoUri, { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(mongoUri, { 
+    useUnifiedTopology: true, 
+    useNewUrlParser: true,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+    bufferCommands: false,
+    bufferMaxEntries: 0
+})
     .then(() => {
         console.log('Connected With Database')
     }).catch((error) => {
-        console.log(error)
+        console.log('Database connection error:', error)
     })
 
 app.use(cookieParser());
@@ -48,8 +55,14 @@ app.get('/', (req, res) => {
     carousel.find({}).then((data) => {
         info.find({}).then((data2) => {
             res.render("index", { data, data2 })
-        }).catch(error2 => { console.log(error2) })
-    }).catch(error => { console.log(error) })
+        }).catch(error2 => { 
+            console.log('Info query error:', error2)
+            res.status(500).send('Database error')
+        })
+    }).catch(error => { 
+        console.log('Carousel query error:', error)
+        res.status(500).send('Database error')
+    })
 })
 
 app.get('/donate', (req, res) => {

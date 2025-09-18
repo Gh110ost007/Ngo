@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "includeFiles": [
-    "views/**",
-    "models/**",
-    "public/**"
   ]
 }

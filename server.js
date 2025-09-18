@@ -50,6 +50,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => {
     carousel.find({}).then((data) => {

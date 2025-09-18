@@ -19,7 +19,7 @@ This website serves as the digital presence for Santushti Vidya Niketan, a schoo
 
 - **Dynamic Homepage:** Admin-managed carousel with images, headings, and descriptions
 - **Secure Admin Portal:** JWT-authenticated dashboard for content management
-- **Program Modules:** Showcase of 6 key program areas (Education, Healthcare, Food Security, etc.)
+- **Program Modules:** Comprehensive showcase of various program areas and initiatives
 - **Donation Integration:** Seamless payment processing
 - **Responsive Design:** Mobile-friendly interface
 - **Content Management:** Non-technical staff can update content without coding
@@ -32,11 +32,6 @@ The admin portal allows staff to:
 - Manage information sections
 - Update program descriptions
 - Access secure dashboard with JWT authentication
-
-**Admin Credentials:**
-
-- Email: adminNgo@gmail.com
-- Password: adminNgo
 
 ## Installation
 

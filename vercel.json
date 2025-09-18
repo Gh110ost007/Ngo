@@ -12,9 +12,9 @@
       "dest": "server.js"
     }
   ],
-  "functions": {
-    "server.js": {
-      "includeFiles": "views/**"
-    }
-  }
+  "includeFiles": [
+    "views/**",
+    "models/**",
+    "public/**"
+  ]
 }

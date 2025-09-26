@@ -40,10 +40,6 @@ The admin portal allows staff to:
 3. Start the server: `npm start`
 4. Visit `http://localhost:3000`
 
-## Deployment
-
-This project is deployed on Vercel with automatic GitHub integration.
-
 ## Contributing
 
 This project is maintained for Santushti Vidya Niketan NGO.

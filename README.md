@@ -43,7 +43,3 @@ The admin portal allows staff to:
 ## Contributing
 
 This project is maintained for Santushti Vidya Niketan NGO.
-
-## License
-
-ISC License
